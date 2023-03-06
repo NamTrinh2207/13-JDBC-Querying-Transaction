@@ -6,13 +6,13 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface IUserDAO {
-     void insertUser(User user) throws SQLException;
+    List<User> selectAllUsers();
 
-     User selectUser(int id);
+    void deleteUser(int id) throws SQLException;
 
-     List<User> selectAllUsers();
+    void updateUser(User user) throws SQLException;
 
-     boolean deleteUser(int id) throws SQLException;
+    User getUserById(int id);
 
-     boolean updateUser(User user) throws SQLException;
+    void insertUserStore(User user) throws SQLException;
 }
